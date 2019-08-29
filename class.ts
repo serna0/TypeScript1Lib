@@ -1,9 +1,36 @@
-class Shape{
-    area: number;
-    color: string;
+class Person{
+    name: string;
+    constructor(theName: string){
+        this.name = theName;
+    }
 
-    constructor(name: string, width: number, height: number){
-        this.area = width * height;
-        this.color = "pink";
-    };
+    introduceSelf(){
+        console.log("Hi , I'm "+this.name+"!");
+    }
 }
+
+let personA = new Person("Sally");
+personA.introduceSelf();
+
+
+//Modificaciones Privadas y públicas
+
+/*
+class Person{
+    name: string;
+    constructor(theName: string){
+        this.name = theName;
+    }
+
+    introduceSelf(){
+        console.log("Hi , I'm "+this.name+"!");
+    }
+}
+
+
+let personA = new Person("Sally");
+personA.introduceSelf();
+personA.name = "Mindy";
+personA.introduceSelf();
+
+*/
